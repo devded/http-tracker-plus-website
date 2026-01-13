@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - HTTP Tracker Plus</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem;">
+                        <img src="assets/icon.png" alt="HTTP Tracker Plus Logo">
+                        <span>HTTP Tracker Plus</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Get
+                        Extension</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container privacy-content">
+            <h1>Privacy & Compliance</h1>
+            <p>Transparency is core to HTTP Tracker Plus. We believe you should know exactly how your browser extension
+                works and what data it interacts with.</p>
+
+            <div class="compliance-section"
+                style="border-left: 4px solid var(--accent-secondary); background: rgba(59, 130, 246, 0.05);">
+                <h3 style="margin-top: 0; color: var(--accent-secondary);">TL;DR Summary</h3>
+                <p style="margin-bottom: 0;"><strong>This is an open-source tool.</strong> We capture HTTP traffic for
+                    your debugging purposes only. All data stays in your browser. We don't have a server. We don't track
+                    you.</p>
+            </div>
+
+            <div class="compliance-section">
+                <h2>Data Collection & Usage</h2>
+                <p><strong>We do not collect, store, share, or transmit any of your personal data.</strong></p>
+                <p>All data intercepted, analyzed, or modified by HTTP Tracker Plus stays locally on your device. We do
+                    not have servers to receive your data, and we do not use any third-party analytics services.</p>
+
+                <h3>Key Privacy Facts:</h3>
+                <ul
+                    style="list-style-position: inside; color: var(--text-muted); margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li>✅ <strong>No Analytics:</strong> We do not use Google Analytics, Mixpanel, or any other tracking
+                        SDKs. We do not track your usage or clicks.</li>
+                    <li>✅ <strong>No User Authentication:</strong> You do not need to create an account to use this
+                        extension. No email or identity verification is required.</li>
+                    <li>✅ <strong>No Remote Code:</strong> All code is bundled within the extension package. We do not
+                        execute remote scripts.</li>
+                    <li>✅ <strong>Local Storage Only:</strong> Settings and logs are stored in your browser's local
+                        storage (`chrome.storage.local`).</li>
+                    <li>✅ <strong>No Cookies:</strong> This extension does not use cookies for tracking purposes.</li>
+                    <li>✅ <strong>Zero Data Transmission:</strong> No network data is ever uploaded to a remote server
+                        or third party.</li>
+                    <li>✅ <strong>Session Volatility:</strong> Captured data is purged when the extension tab is closed
+                        or the 'Clear' button is clicked.</li>
+                </ul>
+            </div>
+
+            <div class="compliance-section">
+                <h2>Permissions Declaration</h2>
+                <p>HTTP Tracker Plus requires specific permissions to function as a developer tool. We limit these
+                    permissions to the absolute minimum required for the core features.</p>
+
+                <table class="permissions-table">
+                    <thead>
+                        <tr>
+                            <th>Permission</th>
+                            <th>Justification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>storage</code></td>
+                            <td>Used to save your preferences, filter patterns, and mask settings locally in your
+                                browser.</td>
+                        </tr>
+                        <tr>
+                            <td><code>webRequest</code><br><code>webRequestBlocking</code></td>
+                            <td>Required to intercept HTTP requests to display them in the tracker and to allow you to
+                                modify headers or block requests as feature of the tool.</td>
+                        </tr>
+                        <tr>
+                            <td><code>declarativeNetRequest</code><br><code>declarativeNetRequestFeedback</code></td>
+                            <td>Used for Manifest V3 compliant request blocking and header modification, ensuring
+                                performance and privacy.</td>
+                        </tr>
+                        <tr>
+                            <td><code>cookies</code></td>
+                            <td>Allows the extension to display cookies associated with requests and responses in the
+                                details panel.</td>
+                        </tr>
+                        <tr>
+                            <td><code>tabs</code></td>
+                            <td>Needed to identify which tab a network request originated from and to open the extension
+                                dashboard in a new tab.</td>
+                        </tr>
+                        <tr>
+                            <td><code>debugger</code></td>
+                            <td>Permits the extension to attach to the tab for advanced body retrieval and inspection
+                                capabilities that are not possible with standard APIs.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;all_urls&gt;</code> (Host Permission)</td>
+                            <td>The extension is a general-purpose HTTP inspector. It needs access to all URLs so you
+                                can inspect traffic from any website you are developing or debugging.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="compliance-section">
+                <h2>Code Transparency & Auditability</h2>
+                <p>Our code is open source and free of obfuscation. You can inspect the source code at any time on our
+                    <a href="https://github.com/devded/http-tracker" target="_blank"
+                        style="color: var(--accent-secondary); text-decoration: underline;">GitHub repository</a>
+                    to verify our privacy claims.
+                </p>
+                <p>We strictly adhere to the Web Store policies against obfuscated code and hidden functionality.
+                    Community contributions are reviewed to ensure no privacy-invading code is added.</p>
+                <p>You can verify the contents of <code>manifest.json</code> and background scripts to confirm no
+                    external API calls exist.</p>
+            </div>
+
+            <div class="compliance-section">
+                <h2>Official Store Compliance</h2>
+                <ul
+                    style="list-style-position: inside; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li>We comply with the <a
+                            href="https://developer.chrome.com/docs/webstore/program-policies/user-data/"
+                            target="_blank" style="color: var(--accent-secondary); text-decoration: underline;">Chrome
+                            Web Store User Data Policy</a> ("Limited Use" disclosure).</li>
+                    <li><strong>Non-Commercialization:</strong> We do not sell, trade, or rent user data to third
+                        parties.</li>
+                </ul>
+            </div>
+
+            <div class="compliance-section">
+                <h2>Contact & Maintenance</h2>
+                <p><strong>Developer:</strong> Dedar Alam</p>
+                <p>If you have any questions about this Privacy Policy or the practices of this extension, please
+                    contact us via our GitHub repository issues page.</p>
+                <div style="margin-top: 1rem; margin-bottom: 2rem;">
+                    <a href="https://github.com/devded/http-tracker/issues" class="btn btn-secondary">Contact
+                        Support</a>
+                </div>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Last Updated: January 12, 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo" style="opacity: 0.8;">
+                    <img src="assets/icon.png" alt="Logo" style="height: 24px; width: 24px;">
+                    <span>HTTP Tracker Plus</span>
+                </div>
+                <div style="color: var(--text-muted); font-size: 0.875rem;">
+                    &copy; 2026 HTTP Tracker Plus. All rights reserved.<br>
+                    <span style="font-size: 0.75rem; opacity: 0.8;">Based on the original <a
+                            href="https://github.com/breach/http-tracker" target="_blank"
+                            style="text-decoration: underline;">HTTP Tracker</a>.</span>
+                </div>
+                <div class="nav-links" style="gap: 1.5rem; font-size: 0.875rem;">
+                    <a href="index.html">Home</a>
+                    <a href="https://github.com/devded/http-tracker" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
