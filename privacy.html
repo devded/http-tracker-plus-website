@@ -86,39 +86,42 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>storage</code></td>
-                            <td>Used to save your preferences, filter patterns, and mask settings locally in your
-                                browser.</td>
-                        </tr>
-                        <tr>
-                            <td><code>webRequest</code><br><code>webRequestBlocking</code></td>
-                            <td>Required to intercept HTTP requests to display them in the tracker and to allow you to
-                                modify headers or block requests as feature of the tool.</td>
-                        </tr>
-                        <tr>
-                            <td><code>declarativeNetRequest</code><br><code>declarativeNetRequestFeedback</code></td>
-                            <td>Used for Manifest V3 compliant request blocking and header modification, ensuring
-                                performance and privacy.</td>
-                        </tr>
-                        <tr>
                             <td><code>cookies</code></td>
-                            <td>Allows the extension to display cookies associated with requests and responses in the
-                                details panel.</td>
-                        </tr>
-                        <tr>
-                            <td><code>tabs</code></td>
-                            <td>Needed to identify which tab a network request originated from and to open the extension
-                                dashboard in a new tab.</td>
+                            <td>Necessary to display, analyze, and filter request/response cookies for recruitment and
+                                debugging.</td>
                         </tr>
                         <tr>
                             <td><code>debugger</code></td>
-                            <td>Permits the extension to attach to the tab for advanced body retrieval and inspection
-                                capabilities that are not possible with standard APIs.</td>
+                            <td>Used to capture response bodies and detailed network timing data not available via
+                                standard APIs.</td>
                         </tr>
                         <tr>
-                            <td><code>&lt;all_urls&gt;</code> (Host Permission)</td>
-                            <td>The extension is a general-purpose HTTP inspector. It needs access to all URLs so you
-                                can inspect traffic from any website you are developing or debugging.</td>
+                            <td><code>declarativeNetRequest</code><br><code>declarativeNetRequestFeedback</code></td>
+                            <td>Enables the user-defined URL blocking feature (simulating ad-blocks or failed endpoints)
+                                and provides feedback to the UI when a blocking rule is triggered.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;all_urls&gt;</code> (Host Permissions)</td>
+                            <td>Required to monitor traffic on any site the user is debugging (general-purpose
+                                debugger).</td>
+                        </tr>
+                        <tr>
+                            <td><code>storage</code></td>
+                            <td>Used to save user preferences, persistent filters, and global exclusion patterns.</td>
+                        </tr>
+                        <tr>
+                            <td><code>tabs</code></td>
+                            <td>Needed to identify which tab a request originated from and provide the "Open Extension"
+                                functionality.</td>
+                        </tr>
+                        <tr>
+                            <td><code>webRequest</code></td>
+                            <td>Primary permission used to monitor and log network headers and metadata in real-time.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>webRequestBlocking</code></td>
+                            <td>Required for the "Add/Modify Headers" feature before requests are sent.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -148,6 +151,14 @@
                     <li><strong>Non-Commercialization:</strong> We do not sell, trade, or rent user data to third
                         parties.</li>
                 </ul>
+                <div
+                    style="margin-top: 1.5rem; padding: 1rem; background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-primary); border-radius: 0 8px 8px 0;">
+                    <h4 style="margin-bottom: 0.5rem; color: var(--accent-primary);">Single Purpose Description</h4>
+                    <p style="margin-bottom: 0; font-size: 0.95rem;">
+                        "HTTP TRACKER PLUS is a centralized network debugging utility designed to monitor, filter, and
+                        inspect HTTP requests and responses across all browser tabs in a single unified interface."
+                    </p>
+                </div>
             </div>
 
 
@@ -163,9 +174,6 @@
                 </div>
                 <div style="color: var(--text-muted); font-size: 0.875rem;">
                     &copy; 2026 HTTP Tracker Plus. All rights reserved.<br>
-                    <span style="font-size: 0.75rem; opacity: 0.8;">Based on the original <a
-                            href="https://github.com/breach/http-tracker" target="_blank"
-                            style="text-decoration: underline;">HTTP Tracker</a>.</span>
                 </div>
                 <div class="nav-links" style="gap: 1.5rem; font-size: 0.875rem;">
                     <a href="index.html">Home</a>
